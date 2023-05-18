@@ -1,0 +1,25 @@
+{
+    "name": "react16_antd3_webpack5",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "webpack --config ./webpackConfig/dev"
+    },
+    "author": "darcy",
+    "license": "ISC",
+    "devDependencies": {
+        "clean-webpack-plugin": "^4.0.0",
+        "css-loader": "^6.7.3",
+        "html-webpack-plugin": "^5.5.1",
+        "less": "^4.1.3",
+        "less-loader": "^11.1.0",
+        "postcss": "^8.4.23",
+        "postcss-loader": "^7.3.0",
+        "postcss-preset-env": "^8.3.2",
+        "style-loader": "^3.3.2",
+        "webpack": "^5.83.1",
+        "webpack-cli": "^5.1.1"
+    }
+}
