@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { getPath } = require("../utils/index");
 module.exports = {
+  mode: "development",
   // 入口配置
   entry: getPath("../src/index.js"),
   // 打包后文件信息
@@ -12,6 +13,7 @@ module.exports = {
     // 文件存放位置
     path: getPath("../build"),
   },
+  devtool: "cheap-source-map",
   module: {
     rules: [
       {
@@ -46,6 +48,13 @@ module.exports = {
         generator: {
           filename: "font/[name].[hash:6][ext]",
         },
+      },
+      {
+        test: /\.(js|jsx|tsx|ts)$/i,
+        use: {
+          loader: "babel-loader",
+        },
+        exclude: /node_modules/,
       },
     ],
   },

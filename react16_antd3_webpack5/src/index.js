@@ -1,22 +1,16 @@
 import "./style.css";
 import "./style.less";
-import "../public/assets/font/iconfont.css";
+import React, { createElement } from "react";
+import ReactDOM from "react-dom";
+import MyApp from "./index.jsx";
+import { sum } from "../utils/tsIndex.ts";
+const arr = [10, 20, 30];
+console.log(arr.map((n) => n * 2));
+console.log(sum(100, 200));
 const zznhImg = "../public/assets/img/zznh.png";
 let root = document.getElementById("root");
 let divDom = document.createElement("div");
 divDom.innerHTML = "9999";
 root.append(divDom);
 
-const zznhImage = new Image();
-zznhImage.src = zznhImg;
-root.appendChild(zznhImage);
-
-const bgDiv = document.createElement("div");
-bgDiv.style.width = "200px";
-bgDiv.style.height = "200px";
-bgDiv.className = "bg-image";
-root.append(bgDiv);
-
-const iEl = document.createElement("i");
-iEl.className = "iconfont icon-ashbin";
-root.append(iEl);
+ReactDOM.render(<MyApp> </MyApp>, document.getElementById("root"));
