@@ -2,3 +2,7 @@ div {
     background: rebeccapurple;
     border-radius: 20px;
 }
+
+.bg-image {
+    background: url("../public/assets/img/nhlt.jpg");
+}
