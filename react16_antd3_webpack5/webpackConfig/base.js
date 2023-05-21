@@ -82,7 +82,9 @@ module.exports = {
   },
   plugins: [
     // 模板配置
-    new HtmlWebpackPlugin({ template: getPath("../public/index.html") }),
+    new HtmlWebpackPlugin({
+      template: getPath("../public/index.html"),
+    }),
     // 清空上一次打包的文件
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({

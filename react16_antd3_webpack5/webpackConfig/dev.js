@@ -1,6 +1,8 @@
 const path = require("path");
 const { getPath } = require("../utils/index");
 const { merge } = require("webpack-merge");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const baseConfig = require("./base");
 module.exports = merge(baseConfig, {
   mode: "development",
@@ -13,7 +15,7 @@ module.exports = merge(baseConfig, {
       name: "runtime/runtime",
     },
     splitChunks: {
-      chunks: "all",
+      // chunks: "all",
       // 拆分包的大小，至少为minSize
       minSize: 20000,
       // 将大于maxSize的包拆分成不小于minSize的包
@@ -31,5 +33,13 @@ module.exports = merge(baseConfig, {
       //   },
       // },
     },
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false,
+      }),
+      new CssMinimizerPlugin({
+        parallel: true,
+      }),
+    ],
   },
 });
