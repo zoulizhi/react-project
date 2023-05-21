@@ -9,6 +9,9 @@ module.exports = merge(baseConfig, {
   devtool: "cheap-source-map",
 
   plugins: [],
+  devServer: {
+    hot: true,
+  },
   optimization: {
     chunkIds: "named",
     runtimeChunk: {

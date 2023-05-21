@@ -33,6 +33,7 @@
         "react-dom": "^16.14.0",
         "react-redux": "^8.0.5",
         "react-router": "^6.11.2",
+        "redux": "4.1.x",
         "style-loader": "^3.3.2",
         "typescript": "^5.0.4",
         "webpack": "^5.83.1",

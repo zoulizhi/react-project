@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import TsDemo from "../tsDemo.tsx";
+import Home from "./home";
+import About from "./about";
 export default class MyApp extends Component {
   constructor(props) {
     super(props);
@@ -16,9 +18,9 @@ export default class MyApp extends Component {
 
     return (
       <div>
-        <TsDemo></TsDemo>
-        <div onClick={this.addCount}>加一</div>
-        <div>结果：{count}</div>
+        {/* <TsDemo></TsDemo> */}
+        <Home></Home>
+        <About></About>
       </div>
     );
   }
