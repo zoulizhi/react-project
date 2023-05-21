@@ -2,7 +2,7 @@ import "./style.css";
 import "./style.less";
 import React, { createElement } from "react";
 import ReactDOM from "react-dom";
-import MyApp from "./index.jsx";
+import MyApp from "component";
 import { sum } from "../utils/tsIndex.ts";
 const arr = [10, 20, 30];
 console.log(arr.map((n) => n * 2));

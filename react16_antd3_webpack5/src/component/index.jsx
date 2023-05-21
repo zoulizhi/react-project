@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TsDemo from "./tsDemo.tsx";
+import TsDemo from "../tsDemo.tsx";
 export default class MyApp extends Component {
   constructor(props) {
     super(props);
