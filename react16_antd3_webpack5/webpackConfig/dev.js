@@ -9,8 +9,14 @@ module.exports = merge(baseConfig, {
   devtool: "cheap-source-map",
 
   plugins: [],
+  // 监听文件的变化
+  watchOptions:{
+    ignored:/node_mudules/,
+  },
   devServer: {
     hot: true,
+    // 一切服务都启用gzip压缩
+    compress:true,
   },
   optimization: {
     chunkIds: "named",

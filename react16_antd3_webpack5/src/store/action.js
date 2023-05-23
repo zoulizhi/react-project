@@ -7,3 +7,18 @@ export const subCount = (num) => ({
   type: SUB_NUMBER,
   num,
 });
+
+const mapStateToProps=(state)=>{
+  return {count:state.count}
+}
+
+const mapDispatchToProps=(dispatch)=>({
+  addCount:function(num){
+    dispatch(addCount(num))
+  },
+  subCount:function(num){
+    dispatch(subCount(num))
+  }
+})
+
+export {mapStateToProps,mapDispatchToProps}
