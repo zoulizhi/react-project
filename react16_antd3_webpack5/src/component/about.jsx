@@ -1,15 +1,10 @@
 import React, { PureComponent } from "react";
-import { connect } from "../utils/connect";
-import { mapStateToProps,mapDispatchToProps } from "../store/action";
+import { connect } from "react-redux";
+import { mapStateToProps, mapDispatchToProps } from "../store/action";
 class about extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = {
-    };
-  }
-  componentDidMount() {
-  }
-  componentWillUnmount() {
+    this.state = {};
   }
 
   render() {
@@ -24,4 +19,4 @@ class about extends PureComponent {
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(about);
+export default connect(mapStateToProps, mapDispatchToProps)(about);

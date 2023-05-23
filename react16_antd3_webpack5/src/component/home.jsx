@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { mapStateToProps,mapDispatchToProps } from "../store/action";
+import { mapStateToProps, mapDispatchToProps } from "../store/action";
 
 class home extends PureComponent {
   constructor(props) {
@@ -17,6 +17,6 @@ class home extends PureComponent {
   }
 }
 
-import { connect } from "../utils/connect";
+import { connect } from "react-redux";
 
-export default connect(mapStateToProps,mapDispatchToProps)(home);
+export default connect(mapStateToProps, mapDispatchToProps)(home);
